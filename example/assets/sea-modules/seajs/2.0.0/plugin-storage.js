@@ -1,15 +1,16 @@
 /**
- * seajs-plugin-storage.js  v0.1
- * a plugin for seajs use to storage javascript into localstorage 
+ * Created with WebStorm.
+ * Author: xbin
+ * Date  : 13-12-24
+ * Time  : 下午6:02
  *
- * author: czxbin@gmail.com
+ * Describe:
  */
- 
 ;(function (seajs, global, doc) {
     // util
     var STORAGE_KEY = 'seajs_localStorage_manifest';
     var STORAGE_PR = 'js_storage_';
-    var REG_PR = new RegExp('^' + STORAGE_PR);
+    var REG_PR = new RegExp('^' + STORAGE_PR + 'http:\/\/');
     var noCacheStr = 'nocache=' + new Date().getTime();
     var notUpdateList = {};
     var updateList = {};
@@ -20,6 +21,7 @@
         return true;
     };
     var removeAllStorage = function () {
+        console.log('removeAllStorage');
         for (var name in localStorage) {
             if (REG_PR.test(name)) {
                 console.log(name);
@@ -28,6 +30,7 @@
         }
     };
     var removeStorageWithoutList = function (list) {
+        console.log('removeStorageWithoutList');
         if (isEmptyObject(list)) {
             removeAllStorage();
             return;
@@ -42,6 +45,7 @@
         }
     };
     var removeStorageWithList = function (list) {
+        console.log('removeStorageWithList');
         if (isEmptyObject(list)) {
             return;
         }

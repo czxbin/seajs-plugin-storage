@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>seajs-plugin-storage example</title>
+</head>
+<body>
+<script src="./assets/sea-modules/seajs/2.0.0/sea.js" type="text/javascript"></script>
+<script type="text/javascript">
+    ;(function () {
+        var createScript = function (src, id, name) {
+            var node = document.createElement('script');
+            node.type = 'text/javascript';
+            node.dataset.name = name;
+            node.id = id;
+            if (src.indexOf('?') > -1) {
+                src += '&nocache=' + new Date().getTime();
+            } else {
+                src += '?nocache=' + new Date().getTime();
+            }
+            node.src = src;
+            document.body.appendChild(node);
+        };
+        createScript('./assets/config.js', 'seajs-config', 'index.js');
+    })();
+</script>
+</body>
+</html>
