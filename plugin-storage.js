@@ -21,7 +21,6 @@
         return true;
     };
     var removeAllStorage = function () {
-        console.log('removeAllStorage');
         for (var name in localStorage) {
             if (REG_PR.test(name)) {
                 console.log(name);
@@ -30,7 +29,6 @@
         }
     };
     var removeStorageWithoutList = function (list) {
-        console.log('removeStorageWithoutList');
         if (isEmptyObject(list)) {
             removeAllStorage();
             return;
@@ -45,7 +43,6 @@
         }
     };
     var removeStorageWithList = function (list) {
-        console.log('removeStorageWithList');
         if (isEmptyObject(list)) {
             return;
         }
