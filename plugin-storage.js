@@ -1,7 +1,7 @@
 /**
- * seajs-plugin-storage.js
+ * seajs-plugin-storage.js  v0.1
  * a plugin for seajs use to storage javascript into localstorage 
- * version: v0.1
+ *
  * author: czxbin@gmail.com
  */
  
