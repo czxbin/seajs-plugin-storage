@@ -1,11 +1,10 @@
 /**
- * Created with WebStorm.
- * Author: xbin
- * Date  : 13-12-24
- * Time  : 下午6:02
- *
- * Describe:
+ * seajs-plugin-storage.js
+ * a plugin for seajs use to storage javascript into localstorage 
+ * version: v0.1
+ * author: czxbin@gmail.com
  */
+ 
 ;(function (seajs, global, doc) {
     // util
     var STORAGE_KEY = 'seajs_localStorage_manifest';
